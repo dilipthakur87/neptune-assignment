@@ -28,6 +28,7 @@ const Converter = () => {
   };
 
   const startConnection = async () => {
+    // checking if MetaMask is installed or not
     if (window?.ethereum) {
       try {
         await activate(inject);
@@ -35,7 +36,7 @@ const Converter = () => {
         console.log('error:', error);
       }
     } else {
-      alert('Metamask no found. Please install Metamask.');
+      alert('MetaMask no found. Please install MetaMask.');
     }
   };
 
