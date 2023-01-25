@@ -28,10 +28,14 @@ const Converter = () => {
   };
 
   const startConnection = async () => {
-    try {
-      await activate(inject);
-    } catch (error) {
-      console.log('error:', error);
+    if (window?.ethereum) {
+      try {
+        await activate(inject);
+      } catch (error) {
+        console.log('error:', error);
+      }
+    } else {
+      alert('Metamask no found. Please install Metamask.');
     }
   };
 
