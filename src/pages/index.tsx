@@ -28,7 +28,7 @@ const Converter = () => {
   };
 
   const startConnection = async () => {
-    // checking if MetaMask is installed or not
+    // checking if MetaMask is installed or not installed
     if (window?.ethereum) {
       try {
         await activate(inject);
