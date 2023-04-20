@@ -6,7 +6,7 @@ import { inject } from '@/components/connector';
 import Modal from '@/components/modal';
 
 const Converter = () => {
-  const { active, account, library, connector, activate, deactivate, chainId } =
+  const { active, account, library, activate, deactivate, chainId } =
     useWeb3React();
   const [nep, setNep] = useState<string | number>('');
   const [busd, setBusd] = useState<string | number>('');
